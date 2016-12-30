@@ -1,0 +1,61 @@
+
+<ion-side-menus>
+
+   <ion-side-menu>side = "left">
+      <h1>SIde Menu</h1>
+   </ion-side-menu>
+
+  
+
+</ion-side-menus>
+<ion-view view-title="Interview" hide-back-button="true" >
+  <ion-content ng-repeat="item in names track by $index" >
+  
+    <div class="row bgh">
+      <div class="col col-100" ng-click="logout()"><i class="icon ion-log-out logutdash"></i></div>
+    </div>
+
+    <div class="bar bar-header" >
+      <div class="h1 title"> {{item.sq_title}}</div>
+    </div>
+
+    <div class="timers">
+       <span class="retime">Remaining Time</span>
+       <i class="icon ion-ios-clock-outline"></i>  
+       <span class="timer" countdown='' ng-model="Timerenable" on-Time-End="timeend()" date='{{time_elapse}}' startdate='{{startdate}}'>&nbsp;</span>
+    </div>
+
+    <div class="row">
+       <div class="col">
+        <div class="video-container">
+          <video controls="controls" style="float: left; width: 100%;height: 23em;" > <source ng-src="{{'http://www.eficaztechsol.com/ednts/'+item.sq_video}}" type="video/mp4"/></video>
+         
+        </div>
+       </div>
+    </div>
+
+      
+    <div class="row">
+      <div class="col"><button class="button button-cancel"  ng-show="totindex!=(indexToShow+1)" ng-click="skip()">Skip</button></div> 
+    </div>
+
+    <input type="hidden" id="sample" ng-model="btndisable" />
+
+    <div class="seconddiv">
+      <span us-spinner="{radius:30, width:8, length: 16}"></span>
+      <div class="row">
+        <div class="col"><button class="button button-cancel" ng-click="videoCapture()">Record</button></div>
+        <div class="col"><button ng-disabled="btn_text_visible=='0' " class="button button-startgreen" ng-click="FileUpload()" ng-show="totindex!=(indexToShow+1)">   <ion-spinner ng-show="btn_text=='Submitting'" icon="bubbles"></ion-spinner> {{btn_text}}</button>
+           <button class="button button-startgreen" ng-show="totindex==(indexToShow+1)" ng-disabled="btn_text_visible=='0' "  ng-click="finish()"><ion-spinner ng-show="btn_text1=='Submitting'" icon="bubbles"></ion-spinner> {{btn_text1}}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="videotest">  
+      <p> Question {{indexToShow+1}} of {{totindex}}</p>
+
+    </div>
+
+  </ion-content>
+</ion-view>
+

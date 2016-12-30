@@ -1,0 +1,31 @@
+
+<ion-view view-title="Question" hide-back-button="true">
+  <ion-content>
+  <p>{{uname}}</p>
+
+	   <div class="card" ng-init="answer()">
+		
+		
+		 <div class="item item-text-wrap" ng-repeat="result in results" > 
+		 
+		  	
+		  </div>
+		  
+		  <div>
+		    <input  type="text" placeholder="Answer" name="answer" ng-model="enteredValue1">
+		  </div>
+ 			
+		  <div class="padding">
+           <button id = "videoCapture"  ng-click="videoCapture()" >VIDEO</button>
+            <input type="hidden" id="sample"  />
+
+             <video controls="controls" width="300" height="240" preload="metadata" autoplay="autoplay" id="vdocntr" webkit-playsinline="webkit-playsinline" class="videoPlayer" width="100" ></video>
+
+
+        </div>
+         <button id = "upload"  ng-click="FileUpload()" >Confirm</button>
+
+	  </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

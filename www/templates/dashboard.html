@@ -1,0 +1,55 @@
+
+<!--<ion-view view-title="Dashboard" hide-back-button="true">
+  <ion-content>
+  <p>{{uname}}</p>
+
+	   <div class="card" ng-repeat="profilelist in names | filter:isActive" >
+		  <div class="item item-divider"><a ng-href="{{profilelist.Url}}">{{profilelist.Name}}</a></div>
+		  <div class="item item-text-wrap"> 
+		 
+		  	 <video controls="controls"  style="float: left;width:250px; height:200px" > <source ng-src="{{profilelist.Url}}" type="video/mp4"/></video>
+
+		  </div>
+		  <div class="padding">
+
+            <button type="button" class="button "  ng-click="reply({{profilelist.id}})">Reply</button>
+        </div>
+
+	  </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
+-->
+
+<ion-view view-title="CANDIDATE DASHBOARD" hide-back-button="true" ng-init="getdash()">
+  <ion-content class="">
+    <div class="dashbord">
+    
+        <div class="row bgh">
+          <div class="col col-100" ng-click="logout()"><i class="icon ion-log-out logutdash"></i></div>
+        </div>
+
+        <div class="institu padding">
+          <div class = "list inst">
+         
+            <h4>Select your Institution</h4>
+           
+            <select name="instID" class="ion-input-select" ng-model="courseList" ng-change="setCourse(courseList)" 
+                    ng-options="item.first_name for item in testAccounts track by item.inst_id" required>
+              
+            <option value="">Select Institute</option>
+            </select>
+           <span style="color:red" class="err">{{msg}}</span><br />
+            <div class="col col-100">
+              <button  class="button button-energized instr" ng-click="gotoInterview(courseList)">Continue</button>
+                  
+            </div>
+          </div>
+        
+        </div>
+    
+    
+    </div>
+  </ion-content>
+</ion-view>
+

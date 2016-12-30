@@ -1,0 +1,41 @@
+
+
+<ion-view hide-nav-bar="true"  hide-back-button="true">
+  <ion-content class="">
+  
+    <div class="login">
+      <div class="topsection">
+        <div class="row">
+          <img class="logo" src="img/logo.png" alt=""> 
+        </div>
+      </div>
+    </div> 
+    <form name="loginForm" ng-submit="vm.login(loginForm.$valid)" novalidate>
+      <div class="bottomsection">
+        <div class="row responsive-sm">
+          <div class="list">
+             <label class="item item-input logininput">
+             <span class="input-label logininput"><i class="{{(!loginForm.username.$invalid)?'icon ion-ios-checkmark':'icon ion-person'}}"></i></span>
+             <input type="email" placeholder="Username(Email Id)" name="username" ng-model="vm.user.username" required>
+             </label>
+             <p ng-show="loginForm.username.$invalid && !loginForm.username.$pristine" class="help-block err"><i class="icon ion-alert"></i> Email is required and must be valid.</p>
+             <label class="item item-input logininput">
+              <span class="input-label logininput"><i class="{{(!loginForm.password.$invalid)?'icon ion-ios-checkmark':'icon ion-locked'}}"></i></span>
+             <input type="password" placeholder="Password" name="password" ng-model="vm.user.password" ng-minlength="6" required>
+             </label>
+             <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block err"><i class="icon ion-alert"></i> Password must contain 6 characters.</p>
+           </div>
+         </div>
+        <div class="row">
+          <div class="col col-50 frgtpass" style="visibility:hidden;"><a href="#">Forget password?</a></div>
+          <div class="col col-50">
+            <button class="button button-energized" ng-disabled="loginForm.$invalid" ng-click="login(vm.user)" ng-click="login(vm.user)">Login</button>         
+          </div>         
+        
+        </div>
+      </div>
+      <p ng-show="errmsg=='invalid user'" class="help-block err"><i class="icon ion-alert-circled"></i>  Invalid credentials.</p>
+    </form>
+
+  </ion-content>
+</ion-view>

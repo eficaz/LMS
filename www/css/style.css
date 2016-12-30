@@ -1,0 +1,423 @@
+@charset "utf-8";
+.text-center{ text-align:center;}
+img.logo {
+    margin: 0 auto;
+    margin-top: 7em;
+}
+
+.topsection{ }
+.bottomsection {
+    padding-top: 3em;
+}
+span.input-label.logininput {width: 14%;}
+.logininput {margin-bottom: 4px;}
+.button-energized {
+    border-color: transparent;
+    background-color: #585858;
+    font-weight: bold;
+    width: 100%;
+    color: #171717;
+    min-height: 6px !important;
+    /* padding: 0 1px!important; */
+    line-height: 32px;
+}
+.frgtpass a {
+    margin-top: 8px;
+    display: block;
+    color: #1f1d1d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+button.button.button-dash {
+    width: 100%;
+    line-height: 105px;
+    top: 5em;
+       background: url(../img/bg-pattern.png),linear-gradient(to top,#df7900,#e77d00,#f5992c,#f5992c);
+    color: #171616;
+    font-weight: 900;
+}
+
+.button.button-energized {
+    border-color: transparent;
+    background: #8BC34A;
+    color: #171717;
+    border-radius: 0;
+    padding: 6px;
+}
+button.button.button-energized.instr {
+    color: #fff;
+    margin-top: 7px;
+}
+button.button.button-energized:hover {
+    color: #171717;
+}
+
+img.dashlogo {
+    width: 100%;
+}
+i.icon.ion-log-out.logutdash {
+    font-size: 22px;
+    text-align: right;
+    display: block;
+    padding-right: 12px;
+    padding-top: 0px;
+    /* float: none; */
+    color: #292828;
+}
+
+ion-content.scroll-content.ionic-scroll.overflow-scroll.has-header.has-tabs-top {
+
+  
+}
+
+.col.col-50.rigttop {
+    text-align: right;
+    font-size: 37px;
+    color: #f89928;
+}
+.rigttop i {
+    display: inline-block;
+    padding-top: 17px;
+    padding-left: 10px;
+}
+
+h3.tec {
+    text-align: center;
+    padding-top: 8px;
+    color: #c57311;
+    font-size: 26px;
+}
+
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid { /* when a field is considered invalid by the browser */
+    background: #fff url(images/invalid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+
+
+/* validation */
+
+
+form {
+
+  margin: 0 auto;
+  padding: 8px;
+}
+form > div {
+  position: relative;
+  
+}
+form > div > label {
+  opacity: 0.3;
+  font-weight: bold;
+  position: absolute;
+  top: 22px;
+  left: 20px;
+}
+form > div > input[type="text"], form > div > input[type="email"], form > div > input[type="password"] {
+    width: 100%;
+    border-bottom: 5px solid #f9a643;
+    padding: 27px 20px 20px 50px;
+    background: #fff;
+}
+form > div > input[type="text"]:focus,
+form > div > input[type="email"]:focus,
+form > div > input[type="password"]:focus {
+  outline: 0;
+  background: white;
+}
+form > div > input[type="text"]:focus + label,
+form > div > input[type="email"]:focus + label,
+form > div > input[type="password"]:focus + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:valid,
+form > div > input[type="email"]:valid,
+form > div > input[type="password"]:valid {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+      background-color: white;
+}
+form > div > input[type="text"]:valid + label,
+form > div > input[type="email"]:valid + label,
+form > div > input[type="password"]:valid + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) {
+  background: pink;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+form > div > input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+form > div > input[type="password"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
+  max-height: 200px;
+  padding: 0 30px 20px 50px;
+}
+form > div .requirements {
+  padding: 0 30px 0 50px;
+  color: #999;
+  max-height: 0;
+  -webkit-transition: 0.28s;
+  transition: 0.28s;
+  overflow: hidden;
+  color: red;
+  font-style: italic;
+}
+
+i.icon.ion-ios-checkmark {
+    color: #4CAF50;
+}
+p.help-block.err {
+    color: #790a0a;
+    font-size: 12px;
+}
+
+li.firstlv span {
+    font-weight: 800;
+    padding-right: 5px;
+    color: #a25c08;
+}
+ol.liveqt li {
+    color: #bf6f0f;
+}
+.button-dashlog {
+    border-color: transparent;
+    background: url(../img/bg-pattern.png),linear-gradient(to top,#df7900,#e77d00,#f5992c,#ffab47);
+    color: #ffffff;
+}
+.padding_0 {
+    padding: 4px 0;
+}
+
+h3.tec {
+    text-align: center;
+    padding-top: 15px;
+    color: #c57311;
+    font-size: 26px;
+    padding-bottom: 15px;
+}
+.dashtext {
+    margin-bottom: 6px;
+}
+
+.disc {
+    font-size: 12px;
+    height: 386px;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+.button.button-cancel {
+    background-color: #d2d0d0;
+}
+button-skip{
+    background-color: #d2d0d0;
+}
+
+.botomd {
+    background-color: #EEE;
+}
+.botomd .row {
+    padding: 0;
+}
+
+label.item.item-checkbox {
+    /* padding: 17px; */
+    font-size: 11px;
+    background: none;
+    border: none;
+}
+.item-checkbox {
+    padding-left: 46px;
+}
+
+.item-checkbox .checkbox {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    left: inherit;}
+	
+	.disc h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 6px;
+    color: #c26f0d;
+}
+
+/*video mode*/
+
+
+.video-container {
+    position: relative;
+    /* padding-bottom: 67.25%; */
+    padding-top: 30px;
+    /* height: 0; */
+    /* overflow: hidden; */
+    margin-top: 1em;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*video mode close*/
+
+.videotest{ text-align:center; margin-top: 10px;}
+.videotest p {
+    color: #ca730b;
+}
+.videotest h1 {
+    color: #ca730b; font-size:16px;font-weight: 600;
+	
+}
+
+button.button.button-skip {
+    width: 100%;
+    background: #11c1f3;
+    border-radius: 0;
+    border: #11c1f3;
+    color: #fff;
+}
+button.button.button-start {
+    width: 100%;
+    background-color: #2196F3;
+    border: #2196F3;
+    color: #fff;
+    border-radius: 0;
+}
+
+.list.inst {
+    top: 97px;
+}
+.list.inst h4 {
+    text-align: center;
+    padding-bottom: 7px;
+}
+
+.iteminst {
+    padding: 6px;
+}
+
+.item-icon-left .icon, .item-icon-right .icon {
+    font-size: 9px;
+    color: #03A9F4;
+}
+
+.button-startgreen {
+    width: 100%;
+    color: white;
+    background-color: #8BC34A;
+    border: #8BC34A;
+	    border-radius: 0;
+}
+
+button.button.button-cancel {
+    background-color: #F44336;
+    border:  #F44336;
+    color: #fff;
+    width: 100%;
+	    border-radius: 0;
+}
+
+.button:hover {
+    color: white;
+    text-decoration: none;
+}
+.h1.title {
+    font-size: 19px;
+    line-height: 44px;
+}
+.course-header {
+    text-align: center;
+}
+
+
+.ion-input-select--large,
+.ion-input-select,
+select {
+  -webkit-appearance:none;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0);  
+  border:thin solid #dddddd;
+  font-weight:300;
+  display:inline;
+  vertical-align:middle;
+  color:#333;
+  padding: auto 0;
+  overflow:hidden;
+  box-sizing:border-box;
+
+}
+
+.ion-input-select--large {
+  width:420px;
+  font-size:1.6rem;
+  background-image: url(http://i.imgur.com/7rGM4IX.png);
+  text-indent:40px;
+  padding:1.2rem 0;
+}
+
+.ion-input-select {
+  width:350px;
+  font-size:1rem;
+  background-image: url(http://i.imgur.com/7rGM4IX.png);
+  background-color:#f8f8f8;
+  text-indent:20px;
+  padding:.5rem 0;
+}
+
+
+
+select::-ms-expand {
+    display: none;
+}
+
+:focus {
+  outline:none;
+}
+.bar.bar-positive {
+    background-color: #6d6f73 !important;    border-color: #6d6f73; }
+
+.bgh {
+    background-color: #f7f7f7 !important;
+}
+.loginBg{  background: #6d6f73 !important; }
+
+#menuLinks .list .item a {
+    background: #6d6f73 !important;
+    color: #fff !important;
+}
+#menuLinks .list .item {
+    border-color: #9ea2a7 !important;
+}
+.list.cours {
+    display: block;
+}
+.courseds{ display: block; }
+.timers {
+    background-color: #f1f1f1;
+    padding: 12px;
+    text-align: center;
+}
+span.retime {
+    display: block;
+    color: #33cd5f;
+}
+p.nocourse {
+    text-align: center;
+    color: #33cd5f;
+}

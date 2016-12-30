@@ -1,0 +1,50 @@
+<div class="tabs-striped  tabs-background-positive tabs-color-light" >
+    <div class="tabs">
+      <a class="tab-item " href="#/app/login"><i class="icon ion-unlocked"></i> Login </a>
+      <a class="tab-item active" href="#/app/signup"> <i class="icon ion-person"></i> Sing Up </a>
+    </div>
+  </div>
+
+<ion-view view-title="Sign Up" class="loginBg" hide-nav-bar="true" ng-controller="signupCtrl">
+  <ion-content class="padding">
+
+  <div class="row responsive-sm padding remvoeBP">
+  	<form name="myForm" novalidate>
+
+	  <div class="col">
+		   <div class="app-logo"><img src="img/logo.png"></div>
+			
+			<div class="list list-inset removePM">
+			  <label class="item item-input"><input type="text" placeholder="Full Name" ng-model="fullname" name="fullname" required>
+			  </label>
+			  <label class="item item-input"><input type="email" placeholder="Email Address" name="email" ng-model="email" required> </label>
+			  <label class="item item-input"><input type="text" placeholder="Phone Number" name="mobile" ng-model="mobile" required> </label>
+			  <label class="item item-input"><input type="password" placeholder="Password" name="password" ng-model="password" ng-minlength="6" required> </label>
+			</div>
+			<div class="loginButton">
+			<p ng-show="myForm.fullname.$error.required" class="errmsg">* Name is required</p>
+            <p ng-show="myForm.email.$error.required" class="errmsg">* Username is required</p>
+            <p ng-show="myForm.email.$invalid && !myForm.username.$pristine" class="errmsg">* Username must be an email address</p>
+            <p ng-show="myForm.email.$error.minlength" class="errmsg">* Username must be longer than 5 characters</p>
+            <p ng-show="myForm.mobile.$error.required" class="errmsg">* Mobile is required</p>
+            <p ng-show="myForm.password.$error.required" class="errmsg">* Password is required</p>
+            <p ng-show="myForm.password.$error.minlength" class="errmsg">* Password must be longer than 6 characters</p>
+        </div>
+
+			 <div class="padding">
+            <button type="button" class="button button-block button-positive" ng-disabled="myForm.$invalid" ng-click="submit(username)">Submit</button>
+        </div>
+
+		</div>
+	  </form>
+
+
+  </div>
+
+	<div class="row  padding removePM">
+	  <div class="col"> <a class=" button-positive button button-block" ng-click="facebookSignIn()"><i class="icon ion-social-facebook"></i></a> </div>
+	  <div class="col"> <a class="button-calm button button-block" ng-click="twitterSignIn()"><i class="icon ion-social-twitter"></i></a> </div>
+	</div>
+
+  </ion-content>
+</ion-view>

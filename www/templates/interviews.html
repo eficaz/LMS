@@ -1,0 +1,33 @@
+
+<ion-view view-title="Interviews" hide-back-button="false">
+  <ion-content class="">
+ 
+    <div class="row bgh">
+      <div class="col col-100" ng-click="logout()"><i class="icon ion-log-out logutdash"></i></div>
+    </div>
+    <p>{{ clock | date:'HH:mm:ss'}}</p>
+    
+    <div class="">
+    <div class="section padding">
+    
+    <div class="course-header">
+        <div class="h1 title">Courses</div>
+    </div>
+
+     <div class="list cours" >
+       <p class="nocourse" ng-show="showMe ==0">No courses assigned</p>
+         <div class="item item-icon-left" ng-repeat="profilelist in names | filter:isActive">
+           <i class="icon ion-checkmark"></i>
+           <a class="courseds" ng-click="coursedetail({{profilelist.cat_id}})"> {{profilelist.qb_name}}</a>
+         </div>       
+     
+     </div>        
+     </div>        
+     </div>  
+
+
+
+
+
+  </ion-content>
+</ion-view> 
